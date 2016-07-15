@@ -60,7 +60,7 @@ build:
 		rsync -a --delete --exclude=.git --exclude=android $(TOPDIR)/ $(call build-dir,$(ABI)) && \
 		cd $(call build-dir,$(ABI)) && \
 		export BASEDIR=$(call install-dir,$(ABI)) && \
-		make -j && \
+		make && \
 		make install && \
 		true \
 	)
