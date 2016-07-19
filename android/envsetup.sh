@@ -191,6 +191,7 @@ mktool()
     } | cat >$BINDIR/${TARGET}-${TOOL}
     test $? -eq 0 || return 1
     chmod +x $BINDIR/${TARGET}-${TOOL} || return 1
+    ln -s ${TARGET}-${TOOL} $BINDIR/${TOOL} || return 1
     return 0
 }
 
